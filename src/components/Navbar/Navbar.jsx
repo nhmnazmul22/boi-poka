@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "../Layout/Container";
 import { Link, NavLink } from "react-router";
 
@@ -16,7 +15,7 @@ const Navbar = () => {
             <div className="dropdown">
               <div
                 tabIndex={0}
-                role="button"
+                role="drop-down"
                 className="btn btn-ghost lg:hidden"
               >
                 <svg
@@ -38,6 +37,7 @@ const Navbar = () => {
               <ul
                 tabIndex={0}
                 className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+                data-testid="mobile-links"
               >
                 <li className="">
                   <NavLink to="/">Home</NavLink>
@@ -55,7 +55,10 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 space-x-3">
+            <ul
+              className="menu menu-horizontal px-1 space-x-3"
+              data-testid="desktop-links"
+            >
               <li>
                 <NavLink to="/" className={getNavLinkClass}>
                   Home

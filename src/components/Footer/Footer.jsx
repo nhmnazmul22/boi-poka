@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="footer sm:footer-horizontal text-base-content">
           <aside>
             <Link to="/" className="text-2xl font-bold">
-              Book Vibe
+              Boi Poka
             </Link>
             <p>
               Book Industries Ltd.

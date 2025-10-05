@@ -14,7 +14,7 @@ describe("Navbar Components", () => {
   it("should render logo and singIn and singUp buttons", () => {
     renderNavbar("/");
 
-    const logo = screen.getByText(/Book Vibe/i);
+    const logo = screen.getByText(/Boi Poka/i);
     const singInBtn = screen.getByRole("link", { name: "Sign in" });
     const singUpBtn = screen.getByRole("link", { name: "Sign Up" });
 

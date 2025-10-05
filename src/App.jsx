@@ -1,9 +1,13 @@
-import "./App.css";
+import Navbar from "../src/components/Navbar/Navbar";
+import { Outlet } from "react-router";
+import Footer from "../src/components/Footer/Footer";
 
 function App() {
   return (
     <>
-      <h1>Hello world</h1>
+      <Navbar></Navbar>
+      <Outlet></Outlet>
+      <Footer></Footer>
     </>
   );
 }

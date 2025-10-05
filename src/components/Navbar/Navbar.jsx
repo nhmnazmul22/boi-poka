@@ -8,9 +8,9 @@ const Navbar = () => {
     }`;
 
   return (
-    <div className="bg-base-100 shadow-sm">
+    <div className="bg-base-100">
       <Container>
-        <div className="navbar">
+        <div className="navbar ">
           <div className="navbar-start">
             <div className="dropdown">
               <div
@@ -51,7 +51,7 @@ const Navbar = () => {
               </ul>
             </div>
             <Link to="/" className="text-2xl font-bold">
-              Book Vibe
+              Boi Poka
             </Link>
           </div>
           <div className="navbar-center hidden lg:flex">

@@ -14,7 +14,7 @@ describe("Footer Component", () => {
   it("Should render a logo and a small description", () => {
     renderFooter("/");
 
-    const logoLink = screen.getByRole("link", { name: /Book Vibe/i });
+    const logoLink = screen.getByRole("link", { name: /Boi Poka/i });
     const description = screen.getByText(/Book Industries Ltd./i);
 
     expect(logoLink).toBeInTheDocument();

@@ -1,4 +1,3 @@
-import React from "react";
 import { useLoaderData, useParams } from "react-router";
 import Container from "../../components/Layout/Container";
 import BookImage from "../../components/BookDetails/BookImage";
@@ -12,13 +11,15 @@ const BookDetails = () => {
   return (
     <section className="py-20">
       <Container>
-        <div className="flex flex-col xl:flex-row gap-10 items-start">
-          <BookImage
-            imageLink={book.image}
-            bookName={book.bookName}
-          ></BookImage>
-          <BookInfo book={book}></BookInfo>
-        </div>
+        {book && (
+          <div className="flex flex-col xl:flex-row gap-10 items-start">
+            <BookImage
+              imageLink={book.image}
+              bookName={book.bookName}
+            ></BookImage>
+            <BookInfo book={book}></BookInfo>
+          </div>
+        )}
       </Container>
     </section>
   );

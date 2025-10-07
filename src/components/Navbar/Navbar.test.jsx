@@ -71,7 +71,9 @@ describe("Navbar Components", () => {
       // Active link
 
       const activeLink = within(desktopMenu).getByText(activeLinkText);
-      expect(activeLink).toHaveClass("btn-outline");
+      expect(activeLink).toHaveClass(
+        "btn-outline border-[#23BE0A] hover:bg-[#23BE0A]"
+      );
 
       // Inactive Links
       const inactiveLinks = within(desktopMenu)
@@ -79,7 +81,9 @@ describe("Navbar Components", () => {
         .filter((link) => link.textContent !== activeLinkText);
 
       inactiveLinks.forEach((link) => {
-        expect(link).toHaveClass("btn-ghost");
+        expect(link).toHaveClass(
+          "bg-transparent border-0 shadow-none hover:bg-[#23BE0A]"
+        );
       });
 
       cleanup();

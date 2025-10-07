@@ -4,14 +4,16 @@ import { Link, NavLink } from "react-router";
 const Navbar = () => {
   const getNavLinkClass = ({ isActive }) =>
     `btn hover:text-white ${
-      isActive ? "btn-outline btn-success" : "btn-ghost btn-success"
+      isActive
+        ? "btn-outline border-[#23BE0A] hover:bg-[#23BE0A]"
+        : "bg-transparent border-0 shadow-none hover:bg-[#23BE0A]"
     }`;
 
   return (
     <div className="bg-base-100">
       <Container>
         <div className="navbar ">
-          <div className="navbar-start">
+          <div className="navbar-start ">
             <div className="dropdown">
               <div
                 tabIndex={0}
